@@ -1,5 +1,5 @@
 <div class="message">
-  <a href="" class="message_profile-pic"></a>
+  <%= image_tag(current_user.avatar.url(:thumb), :class => "message_profile-pic") %>
   <a href="" class="message_username"><%= message.user.email %></a>
   <span class="message_timestamp">
     <%= time_ago_in_words message.created_at %> ago
